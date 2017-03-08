@@ -21,6 +21,9 @@ try:
 except ImportError:
     pil_image = None
 
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+
 
 def random_rotation(x, rg, row_axis=1, col_axis=2, channel_axis=0,
                     fill_mode='nearest', cval=0.):
